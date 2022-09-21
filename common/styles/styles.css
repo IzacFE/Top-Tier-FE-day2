@@ -1,0 +1,61 @@
+.trioContainer {
+  margin-top: 3rem;
+}
+
+.contentTrio {
+  margin-top: 4rem;
+  display: grid;
+  grid: auto/auto auto auto;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trioIconContainer {
+  display: grid;
+  place-items: center;
+}
+
+.trioIcon {
+  max-width: 100%;
+  width: 6rem;
+  margin: auto;
+}
+
+.trioTitle,
+.titleDescrip,
+.trioCardTitle,
+.trioDescrip,
+.trioMore {
+  text-align: center;
+}
+
+.mainContent {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mainContentLeft img {
+  max-height: 100vh;
+}
+
+.bottomFooter p {
+  text-align: center;
+}
+
+@media (max-width: 539px) {
+  .contentTrio {
+    grid: auto/auto;
+  }
+
+  .mainContent {
+    flex-direction: column;
+  }
+
+  .upperFooter {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
