@@ -1,3 +1,197 @@
+/* NAVBAR*/
+/* NAVBAR HINGGA MAIN JANGAN DIEDIT */
+:root {
+  --main-green: #71c55d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 90px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 3px 6px #c1c3c736;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ulNavbar {
+  margin-bottom: 0 !important;
+}
+
+.logoLink,
+.logoLink:hover,
+.logoLink:focus,
+.logoLink:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoNavbar {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.eGreen {
+  color: var(--main-green);
+}
+
+nav ul {
+  float: right;
+  padding-left: 0;
+}
+
+.navListEffek {
+  display: inline-block;
+  margin: 35px 10px;
+  list-style: none;
+}
+
+.navListEffek a {
+  color: inherit;
+  text-decoration: none;
+  padding: 7px 13px;
+  border-radius: 5px;
+}
+
+.navListEffek a:hover {
+  color: var(--main-green);
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 40px;
+  float: right;
+  line-height: 70px;
+  margin-right: 50px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.buttonContact {
+  background-color: #f47522;
+  border-color: #f47522;
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: 15px;
+  width: 130px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContact:hover {
+  background-color: #ffffff;
+  color: #f47522;
+  border-color: #f47522;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1005px) {
+  .checkbtn {
+    display: block;
+  }
+
+  nav {
+    font-size: 2vh;
+  }
+
+  .ulNavbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: rgb(248, 248, 248);
+    top: 90px;
+    left: -100%;
+    transition: 0.5s;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 90px;
+  }
+
+  .ulNavbar li {
+    display: block;
+    margin: 0 0;
+    line-height: 50px;
+    height: 50px;
+  }
+
+  .ulNavbar li a {
+    padding: 10px 45px;
+  }
+
+  .logoNavbar {
+    padding-left: 5vw;
+  }
+
+  nav ul {
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    line-height: 90px;
+    margin: 0 0;
+  }
+
+  nav ul li a {
+    padding: 0 0;
+    border-radius: 5px;
+  }
+
+  .contact_button {
+    font-size: 2vh;
+    width: 30vw;
+    max-width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .buttonContact {
+    height: 50px;
+  }
+
+  #check:checked ~ .ulNavbar {
+    left: 0;
+  }
+}
+/*  */
+
+main {
+  margin-top: 120px;
+}
+
 .trioContainer {
   margin-top: 3rem;
 }
@@ -6,8 +200,7 @@
   margin-top: 4rem;
   display: grid;
   grid: auto/auto auto auto;
-  gap: 2rem;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -18,8 +211,9 @@
 
 .trioIcon {
   max-width: 100%;
-  width: 6rem;
+  width: 4rem;
   margin: auto;
+  margin-bottom: 1.5rem;
 }
 
 .trioTitle,
@@ -30,28 +224,116 @@
   text-align: center;
 }
 
+.trioTitle {
+  font-weight: 200;
+}
+
+.trioCardTitle {
+  font-size: 1rem;
+}
+
+.trioMore,
+.trioMore:hover,
+.trioMore:focus,
+.trioMore:active {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.trioMore:hover,
+.trioMore:active {
+  color: var(--main-green);
+}
+
 .mainContent {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
+}
+
+.mainContentRight {
+  width: 55%;
+  padding-top: 5rem;
+}
+
+.mainContentRight h2 {
+  font-size: 3rem;
+}
+
+.mainContentRight h2 span {
+  font-weight: 200;
+}
+
+.mainContentDescript {
+  margin-top: 2rem;
+  line-height: 200%;
+}
+
+.mainContentLeft {
+  display: grid;
+  place-items: center;
 }
 
 .mainContentLeft img {
   max-height: 100vh;
+  max-width: 100%;
+}
+
+.mainContentList {
+  margin-top: 2rem;
+  padding-left: 0.5rem;
+}
+
+.mainContentList li {
+  list-style-type: ">";
+  margin-bottom: 1rem;
+}
+
+.mainContentList li span {
+  margin-left: 0.3rem;
+}
+
+footer {
+  background-color: #2a2c30;
+  color: #ffffff;
+}
+
+.bottomFooter {
+  border-bottom: 3px solid lightblue;
 }
 
 .bottomFooter p {
   text-align: center;
 }
 
-@media (max-width: 539px) {
+footer li a:hover {
+  color: #71c55d !important;
+}
+
+.green {
+  color: var(--main-green);
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+  }
+
+  .mainContentRight {
+    margin: auto;
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
   .contentTrio {
     grid: auto/auto;
   }
 
-  .mainContent {
-    flex-direction: column;
+  footer {
+    text-align: center !important;
   }
 
   .upperFooter {
